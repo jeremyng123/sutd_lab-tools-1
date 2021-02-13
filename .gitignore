@@ -10,7 +10,9 @@ rainbowcrack-1.8-win64/*
 *.ova
 */*.ova
 */*/*.ova
-*/*/*/*.ovabfg-1.13.2.jar
+*/*/*/*.ova
+
+bfg-1.13.2.jar
 
 rockyou.txt
 */rockyou.txt
