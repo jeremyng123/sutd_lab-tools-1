@@ -11,7 +11,7 @@ for line in hash_targets:
     if len(words) == 1 and words[0] != '':
         filestr = words[0].lower()
     elif len(words) >= 2:
-        plaintexts[filestr].append(words[-1])
+        plaintexts[filestr].append(words[-1].strip())
 hash_targets.close()
 
 output_weak=""
