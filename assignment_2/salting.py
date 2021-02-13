@@ -12,6 +12,8 @@ my_answers.close()
 
 output_dict=""
 output=""
+
+r.seed("3")
 for word in plaintexts:
     newword= word+l[r.randint(0,len(l)-1)]
     newhash = hl.md5(newword.encode()).hexdigest()
