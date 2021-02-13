@@ -37,12 +37,14 @@ def run():
   l = 'abcdefghijklmnopqrstuvwxyz0123456789'
   alltries=[]
   index = 0
-  for a in range(len(l)):
-    for b in range(len(l)):
-      for c in range(len(l)):
-        for d in range(len(l)):
-          for e in range(len(l)):
-            sometry = l[a]+l[b]+l[c]+l[d]+l[e]
+  for a in l:
+    for b in l:
+      for c in l:
+        for d in l:
+          for e in l:
+            sometry = a+b+c+d+e
+            if sometry in tried:
+              continue
             alltries.append(sometry)
   print("start brute force")
   for element in alltries:
@@ -58,7 +60,7 @@ def run():
       if len(hashtargets) == 0:
         break
     index+=1
-    if index%1000000==0:
+    if index%10000000==0:
       print(f"tried: {index}times\nenumerating: {element}\nanswers foundso far: {len(answers.keys())}")
   
   write_to_output = ""
@@ -73,6 +75,7 @@ def run():
   output = open(args.output, 'w')
   output.write(write_to_output)
   output.close()
+  
   
   
   
